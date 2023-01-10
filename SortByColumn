@@ -1,13 +1,14 @@
-// Online Java Compiler
-// Use this editor to write, compile and run your Java code online
-import java.util.Random;
+mport java.util.Random;
 
-class SortByColumn {
+public class TestQuestion {
+
     public static void main(String[] args) {
-        int[][] arr = {{32, 42, 11}, {26, 15, 45}, {19, 18, 57}};
+        
         int colum = 3, row=3;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
+        
+        int[][] arr = new int[row][colum];
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < colum; j++) {
                 Random rand = new Random();
 
         int randomNum = rand.nextInt(100) ;
@@ -19,7 +20,7 @@ class SortByColumn {
         }
         
          System.out.println("Shorted Array");
-        sortByColumn(arr,0);
+        sortByColumn(arr,1);//you can short column from your choice
 
     }
     
@@ -35,12 +36,13 @@ class SortByColumn {
         }
                     System.out.println();
 
-        
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                System.out.print(arr[i][j]+",");
-            }
-            System.out.println();
+    
+    for (int i = 0; i < arr.length; i++) {
+        for (int j = 0; j < arr.length; j++) {
+           
+             System.out.print(arr[i][j]+",");
         }
+        System.out.println();
+    }
     }
 }
