@@ -6,8 +6,11 @@ public class AdaniTest {
 	        
 	        
 	        Scanner scn = new Scanner(System.in);
+	        System.out.println("enter row-");
             int r = scn.nextInt();
+            System.out.println("enter column-");
             int c = scn.nextInt();
+            System.out.println("enter the column you want to sort-");
             int s = scn.nextInt();
             int colum = c, row=r;
 	        
