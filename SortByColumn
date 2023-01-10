@@ -1,0 +1,46 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Random;
+
+class SortByColumn {
+    public static void main(String[] args) {
+        int[][] arr = {{32, 42, 11}, {26, 15, 45}, {19, 18, 57}};
+        int colum = 3, row=3;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                Random rand = new Random();
+
+        int randomNum = rand.nextInt(100) ;
+
+                arr[i][j] =   randomNum;
+                 System.out.print(arr[i][j]+",");
+            }
+            System.out.println();
+        }
+        
+         System.out.println("Shorted Array");
+        sortByColumn(arr,0);
+
+    }
+    
+    public static void sortByColumn(int[][] arr, int column) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j][column] > arr[j + 1][column]) {
+                    int[] temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+                    System.out.println();
+
+        
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                System.out.print(arr[i][j]+",");
+            }
+            System.out.println();
+        }
+    }
+}
